@@ -16,8 +16,20 @@ const routes = [
     component: () => import( '../views/About.vue')
   },
   {
+    path: '/demo-home',
+    component: ()=>import('../App/pra')
+  },
+  {
     path:'/practise',
     component: ()=>import('../views/practise.vue')
+  },
+  {
+    path:'/veeValidate',
+    component: ()=>import('../views/veeValidate.vue')
+  },
+  {
+    path:'/composition',
+    component: ()=>import('../views/composition.vue')
   }
 ]
 

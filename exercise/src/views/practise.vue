@@ -8,6 +8,7 @@
       <button @click="addtocart(item)">加入購物車</button>
     </div>
     <div>
+      <div>123</div>
       搜尋 :
       <input type="search" v-model="search" />
       <div v-for="item in filterP" :key="item.name">{{ item.name }}</div>
@@ -26,6 +27,9 @@
   </slotdemo>
   <teleportdemo></teleportdemo>
   <provideoutside></provideoutside>
+  <!-- <div>
+    <input type="checkbox" />
+  </div> -->
 </template>
 <script>
 import { a, b } from "./data.js";
@@ -64,9 +68,9 @@ export default {
     provideoutside,
   },
   provide: {
-    text:"第一層-最外層傳進去的文字"
+    text: "第一層-最外層傳進去的文字",
   },
-  
+
   methods: {
     NumMethod() {
       const num3 = [...this.num1, ...this.num2];
@@ -112,5 +116,33 @@ export default {
       });
     },
   },
+  created(){
+    console.log(this);
+  }
 };
 </script>
+<style>
+/* input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+}
+input[type="checkbox"]::after {
+ 
+  color: #000;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  visibility: visible;
+  padding-left: 0px;
+  text-align: center;
+  content: " ";
+  border-radius: 3px;
+}
+input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: #fff;
+  font-size: 12px;
+
+  background-color: #5b36ff;
+} */
+</style>
